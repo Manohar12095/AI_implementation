@@ -8,7 +8,9 @@ st.title("🤖 Gemini Chatbot")
 st.write("Chat with Google's Gemini model")
 
 # Load API key securely
-api_key = st.secrets.get("api_key")
+st.write("Secrets available:", st.secrets)
+api_key = st.secrets.get("GEMINI_API_KEY")
+
 
 if not api_key:
     st.error("API key not found. Please add GEMINI_API_KEY in Streamlit secrets.")
